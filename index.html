@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>online resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="cover.css" rel="stylesheet">
+    <style>
+      .sameHeight{
+        height: 120px;
+      }
+
+      .sameWidth{
+        width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Resume</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li id="navHomeTab" class="active"><a href="#" onclick="gotoHome()">Home</a></li>
+                  <li id="navPortfolioTab"><a href="#" onclick="gotoPortfolio()">Portfolio</a></li>
+                  <li id="navContactTab"><a href="#" onclick="gotoContact()">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" id="home">
+            <center>
+              <img src="https://goo.gl/Z4u1b9" alt="" class="img-responsive sameHeight sameWidth">
+            </center>
+            <h1 class="cover-heading">Hello</h1>
+            <p class="lead">I'm Wenjia</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-block">Scroll down for more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="portfolio">
+            <center>
+              <img src="https://goo.gl/bxV4Tk" alt="" class="img-responsive img-circle sameHeight sameWidth">
+            </center>
+            <h1 class="cover-heading">Portfolio</h1>
+            <p class="lead">I has much skills</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-block">Scroll down for more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="contact">
+            <center>
+              <img src="https://goo.gl/1bGqQG" alt="" class="img-responsive img-circle sameHeight sameWidth">
+            </center>
+            <h1 class="cover-heading">Contact</h1>
+            <p class="lead">Call me maybe</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-block">Scroll down for more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  <script>
+  $(function(){
+    $("#portfolio").hide()
+    $("#contact").hide()
+  })
+    function gotoHome(){
+    $("#home").slideDown()
+    $("#contact").hide()
+    $("#portfolio").hide()
+    $("#navHomeTab").attr('class', 'active')
+    $("#navContactTab").attr('class', '')
+    $("#navPortfolioTab").attr('class', '')
+    }
+
+    function gotoPortfolio(){
+    $("#home").hide()
+    $("#contact").hide()
+    $("#portfolio").slideDown()
+    $("#navHomeTab").attr('class', '')
+    $("#navContactTab").attr('class', '')
+    $("#navPortfolioTab").attr('class', 'active')
+
+    }
+
+    function gotoContact(){
+    $("#home").hide()
+    $("#contact").slideDown()
+    $("#portfolio").hide()
+    $("#navHomeTab").attr('class', '')
+    $("#navContactTab").attr('class', 'active')
+    $("#navPortfolioTab").attr('class', '')
+
+    }
+
+  </script>
+  </body>
+</html>

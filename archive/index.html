@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>Milky Way</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Vote for your favourite photo submission!</h1>
+    <h2>Simply click on the vote button to upvote</h2>
+
+    <table>
+      <tr>
+        <td><img height="300px"src="https://goo.gl/489wVY"></td>
+      <td>
+        <table>
+          <tr>
+            <td>Count: <span id="StarOneCount">0</span></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="increaseCountStars1()">Vote for me!</button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </table>
+
+    <table>
+      <tr>
+        <td><img height="300px"src="http://darksitefinder.com/wp-content/uploads/2016/02/IMGP9720-Edit.jpg"></td>
+      <td>
+        <table>
+          <tr>
+            <td>Count: <span id="StarTwoCount">0</span></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="increaseCountStars2()">Vote for me!</button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </table>
+
+    <table>
+      <tr>
+        <td><img height="300px"src="https://goo.gl/E8XxZ2"></td>
+      <td>
+        <table>
+          <tr>
+            <td>Count: <span id="StarThreeCount">0</span></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="increaseCountStars3()">Vote for me!</button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </table>
+
+    <table>
+      <tr>
+        <td><img height="300px"src="https://goo.gl/AmcEzz"></td>
+      <td>
+        <table>
+          <tr>
+            <td>Count:<span id="StarFourCount">0</span></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="increaseCountStars4()">Vote for me!</button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </table>
+
+  <script>
+    var star1 = 0
+    var star2 = 0
+    var star3 = 0
+    var star4 = 0
+
+    function increaseCountStars1(){
+      star1 += 1
+      $("#StarOneCount").html(star1) <!--changes the count-->
+    }
+
+    function increaseCountStars2(){
+      star2 += 1
+      $("#StarTwoCount").html(star2)
+    }
+
+    function increaseCountStars3(){
+      star3 += 1
+      $("#StarThreeCount").html(star3)
+    }
+
+    function increaseCountStars4(){
+      star4 += 1
+      $("#StarFourCount").html(star4)
+    }
+  </script>
+
+  </body>
+</html>
